@@ -1,7 +1,12 @@
 const heapsort = (arr) => {
-  /* Your code here */
-  
-};
+    const heap = new Heap;
+    arr.forEach(item => heap.insert(item))
+    const result = []
+    while (heap.getSize()) {
+      result.unshift(heap.delete())
+    }
+    return result
+  };
 
 
 class Heap {
@@ -27,7 +32,7 @@ class Heap {
   }
 
   getMax() {
-    return this.storage[0];
+    return this.storage.length;
   }
 
   getSize() {
